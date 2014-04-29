@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="138" height="20" tilewidth="70" tileheight="70" backgroundcolor="#4f4f4f">
+ <tileset firstgid="1" name="tiles_spritesheet" tilewidth="70" tileheight="70" spacing="1">
+  <image source="Platformer Pack/tiles_spritesheet.png" width="852" height="856"/>
+ </tileset>
+ <layer name="background" width="138" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztzsEJAAAIAzFXdP9l3EBQ8GUC924jAAAAAAAAAAAAAMim643tr0mfFL0MCdA=
+  </data>
+ </layer>
+ <layer name="level" width="138" height="20">
+  <data encoding="base64" compression="zlib">
+   eJztmksOwiAQQNkaXRrXjUsT3WjUxo2LHqeH6NE8mlQwQUIpIx1mCLxkQmMpkMzr9OdKCLECRMn01AsgBOJI9aRcqifhVE/y8OQp4yDjQjR/9SQPT6iZ8qT37KOiF8uui4snexmtaoeYcU56nFZtR43lgsqHXiyfewhLetLJvHR6e2u15j6bndx31OPLdmjVbyhs57t4SZ0jyHyYDnGpJ3OYdQKrVoQQek5zvBbFkIsnWKxlbFQ7hPR/oK5GwdExqCeY14QcCPGE4tqEff9Sej1x0el7JNf91L/1hGONgFA9CSfFeTs1JzXVExhTeUv9zJraneqJwvfcboKRHw71Yo7qCYwccopBqZ6E1g8X1O9kKSjVk1hKqyscPbnr51Iz7pFjnqNX9QumJ5Tfcabg4IntxfdbjxlHow/EGXvsWN++cMphCv55HxsajczRTYiXHY3Vz+WFL0xnxjmu6q8pH8btxjP2eGyzwLeh0jx5A0gRQ/g=
+  </data>
+ </layer>
+ <layer name="foreground" width="138" height="20">
+  <data encoding="base64" compression="zlib">
+   eJzt17ENACAMA7Ae0J0nOJLTAXEDKkj2ko4Z0wgAgD+0iNGqSwAAAFzUqwvwlP0H58o8NwAAfMmuBQCqTM0sAmc=
+  </data>
+ </layer>
+ <objectgroup name="ground" width="138" height="20">
+  <object x="2310" y="1330">
+   <polygon points="0,0 70,-70 280,-70 350,-140 630,-140 700,-70 840,-70 910,0 1190,0 1190,70 0,70"/>
+  </object>
+  <object x="1330" y="420">
+   <polygon points="0,0 140,0 140,70 0,70"/>
+  </object>
+  <object x="1540" y="420">
+   <polygon points="0,0 70,0 70,70 0,70"/>
+  </object>
+  <object x="1680" y="420">
+   <polygon points="0,0 70,0 70,70 0,70"/>
+  </object>
+  <object x="1820" y="420">
+   <polygon points="0,0 140,0 140,70 0,70"/>
+  </object>
+  <object x="770" y="0">
+   <polygon points="0,0 70,0 70,630 210,630 210,700 70,700 70,1330 0,1330 0,0"/>
+  </object>
+  <object x="840" y="1330">
+   <polygon points="0,0 1470,0 1470,70 0,70"/>
+  </object>
+  <object x="2940" y="490">
+   <polygon points="0,0 350,0 350,70 0,70"/>
+  </object>
+  <object x="3010" y="210">
+   <polygon points="0,0 70,0 70,70 0,70"/>
+  </object>
+  <object x="3080" y="210">
+   <polygon points="0,0 70,0 70,70 0,70"/>
+  </object>
+  <object x="3150" y="210">
+   <polygon points="0,0 70,0 70,70 0,70"/>
+  </object>
+  <object x="3640" y="350">
+   <polygon points="0,0 280,0 280,70 0,70"/>
+  </object>
+  <object x="4200" y="420">
+   <polygon points="0,0 70,0 70,70 0,70"/>
+  </object>
+  <object x="4340" y="1050">
+   <polygon points="0,0 0,70 140,70 140,0"/>
+  </object>
+  <object x="4620" y="910">
+   <polygon points="0,0 140,0 140,70 0,70"/>
+  </object>
+  <object x="4830" y="700">
+   <polygon points="0,0 210,0 210,70 0,70"/>
+  </object>
+  <object x="4483" y="562">
+   <polygon points="0,0 206,-1 206,38 -2,37"/>
+  </object>
+  <object x="2450" y="350">
+   <polygon points="0,0 70,0 140,70 280,70 278,106 250,133 214,141 70,140 -70,140 -107,134 -131,118 -140,94 -140,70 -70,70"/>
+  </object>
+  <object x="5250" y="770">
+   <polygon points="0,0 350,0 350,70 210,70 210,140 140,140 140,280 210,280 210,350 280,350 280,630 210,630 210,350 140,350 140,280 70,280 70,70 0,70"/>
+  </object>
+  <object x="5250" y="0">
+   <polygon points="0,0 0,350 70,350 70,560 140,560 140,350 70,350 70,0"/>
+  </object>
+  <object x="5390" y="490">
+   <polygon points="0,0 140,0 140,70 0,70"/>
+  </object>
+  <object x="5670" y="280">
+   <polygon points="0,0 140,0 140,70 0,70"/>
+  </object>
+  <object x="5740" y="840">
+   <polygon points="0,0 210,0 210,70 0,70"/>
+  </object>
+  <object x="6020" y="490">
+   <polygon points="0,0 140,0 140,70 0,70"/>
+  </object>
+  <object x="6300" y="700">
+   <polygon points="0,0 140,0 140,70 0,70"/>
+  </object>
+  <object x="6790" y="910">
+   <polygon points="0,0 70,0 70,70 0,70"/>
+  </object>
+  <object x="7070" y="1190">
+   <polygon points="0,0 210,0 210,70 0,70"/>
+  </object>
+  <object x="7280" y="770">
+   <polygon points="0,0 140,0 140,70 0,70"/>
+  </object>
+  <object x="7420" y="350">
+   <polygon points="0,0 280,0 280,70 0,70"/>
+  </object>
+  <object x="7910" y="630">
+   <polygon points="0,0 350,0 350,70 0,70"/>
+  </object>
+  <object x="8260" y="280">
+   <polygon points="0,0 210,0 210,70 0,70"/>
+  </object>
+  <object x="7070" y="560">
+   <polygon points="0,0 140,0 140,70 0,70"/>
+  </object>
+  <object x="7280" y="420">
+   <polygon points="0,0 70,0 70,70 0,70"/>
+  </object>
+  <object x="7700" y="840">
+   <polygon points="0,0 70,0 70,70 0,70"/>
+  </object>
+  <object x="7490" y="1050">
+   <polygon points="0,0 140,0 140,70 0,70"/>
+  </object>
+  <object x="8050" y="420">
+   <polygon points="0,0 140,0 140,70 0,70"/>
+  </object>
+  <object x="5950" y="630">
+   <polygon points="0,0 70,0 70,70 0,70"/>
+  </object>
+  <object x="3640" y="1330">
+   <polygon points="0,0 280,0 350,-70 420,-70 420,-140 490,-140 490,-70 560,-70 630,0 700,0 700,70 0,70"/>
+  </object>
+ </objectgroup>
+</map>
