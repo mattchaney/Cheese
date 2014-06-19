@@ -6,7 +6,7 @@ import java.util.Set;
 import cheesegame.CheeseGame;
 import cheesegame.entities.Player;
 import cheesegame.entities.Player.State;
-import cheesegame.handlers.CollisionHandler;
+import cheesegame.handlers.CollisionDetector;
 import cheesegame.handlers.InputState;
 import cheesegame.handlers.TiledMapManager;
 
@@ -20,6 +20,7 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.math.Polygon;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
 public class PlayScreen extends AbstractScreen {
@@ -56,9 +57,9 @@ public class PlayScreen extends AbstractScreen {
 	private void loadMap(final String filename) {
 		polys.clear();
 		map = TiledMapManager.loadMap(filename, polys);
-		CollisionHandler.setLevelPolys(polys);
+		CollisionDetector.setLevelPolys(polys);
 		tileRenderer = new OrthogonalTiledMapRenderer(map, CheeseGame.SCALE);
-		player = new Player(STARTX, STARTY);
+		player = new Player(new Vector2(STARTX, STARTY));
 	}
 	
 	@Override
@@ -90,7 +91,7 @@ public class PlayScreen extends AbstractScreen {
 	public void update(float delta) {
 		player.update(delta);
 		if(State.Dead == player.state)
-			player = new Player(STARTX, STARTY);
+			player = new Player(new Vector2(STARTX, STARTY));
 	}
 	
 	@Override
@@ -98,14 +99,14 @@ public class PlayScreen extends AbstractScreen {
 		Gdx.gl.glClearColor(0, 0, 0, 1);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
-		viewport.getCamera().position.x = Math.max(player.x, 40f);
+		viewport.getCamera().position.x = Math.max(player.position.x, 40f);
 		viewport.getCamera().update();
 		
 		tileRenderer.setView((OrthographicCamera) viewport.getCamera());
 		tileRenderer.render();
 		
 		cPolys.clear();
-		cPolys.addAll(CollisionHandler.getCollisions(player.hitbox));
+		cPolys.addAll(CollisionDetector.getCollisions(player.hitbox));
 		uPolys.clear();
 		uPolys.addAll(polys);
 		uPolys.removeAll(cPolys);
@@ -135,9 +136,9 @@ public class PlayScreen extends AbstractScreen {
 		
 		
 		if (player.facesRight) {
-			batch.draw(player.texture, player.x + Player.WIDTH, player.y, -Player.WIDTH, Player.HEIGHT);
+			batch.draw(player.texture, player.position.x + Player.WIDTH, player.position.y, -Player.WIDTH, Player.HEIGHT);
 		} else {
-			batch.draw(player.texture, player.x, player.y, Player.WIDTH, Player.HEIGHT);
+			batch.draw(player.texture, player.position.x, player.position.y, Player.WIDTH, Player.HEIGHT);
 		}
 		
 		batch.end();
